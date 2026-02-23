@@ -1,0 +1,76 @@
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+.c-bg-light {
+	background-color: $bg-light;
+    background-color: var(--bg-light);
+}
+
+/* ==========================================================================
+  Cookie notice
+   ========================================================================== */
+
+.c-cookie-notice{
+    display: none;
+    position: fixed;
+	right: 0;
+    bottom: 30px;
+    width: 400px;
+    padding: 1.5rem 30px;
+    background-color: $bg-light;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.5;
+    text-align: left;
+	border: solid 1px $border-basic;
+    border-color: var(--border-basic);
+	border-right: none;
+}
+
+.c-text-block .c-cookie-notice-list {
+    padding-bottom: 0;
+}
+
+.c-text-block .c-cookie-notice-list li::before {
+    background: transparent;
+}
+
+.c-text-block .c-cookie-notice-list li {
+    display: inline-block;
+    padding: 0.5em 0.5em 0 0;
+}
+
+
+
+.c-news-item{
+    .c-available{
+        position:absolute;
+        top: 0;
+        left: $grid-col;
+        left: var(--grid-col);
+        background-color: $bg-light;
+        background-color: var(--bg-light);
+        color: $text-color;
+        color: var(--text-color );
+        padding: 0.5em 1em;
+        font-size: 0.75em;
+    }
+}
+
+@media only screen and (max-width:767px) {    
+	.c-cookie-notice {
+		width: 100%;
+		bottom: 0;
+		border: none;
+		border-top: solid 1px $border-basic;
+        border-color: var(--border-basic);
+	}
+
+    .c-col-12-mobile{
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;   
+    }
+}
