@@ -18,8 +18,9 @@ if($posttype == 'bags'):
 		$text       = $post->post_excerpt;
 		$date       = get_the_date( 'd. M Y',$post->ID );
 		$image_1    = get_field('bild_1',$post->ID );
+		$image_2    = get_field('bild_2',$post->ID );
 		$available  = get_field('available',$post->ID );
-		$model  = get_field('model',$post->ID );
+		$model  	= $post->ID;
 		$preis      = apply_filters('c_format_price', get_field('preis',$post->ID ));
 		$link		= get_permalink($post->ID);
 		$email    	= apply_filters( 'c_get_option', 'company_email' );
@@ -30,13 +31,20 @@ if($posttype == 'bags'):
 				<?php if (!$available ): ?>
 					<span class="c-available">Ausverkauft</span>
 				<?php endif; ?>
-				<?php if (!empty($image_1) ): ?>
-					<a href="mailto:<?= $email ?>?subject=Ihre%20Anfrage #<?= $model ?>">
-					<figure> <?= wp_get_attachment_image( $image_1, 'large' ) ;?></figure>
-					</a>
+				<?php if (!empty($image_1) && !empty($image_2)) : ?>
+					<figure class="hover-switch">
+						<?= wp_get_attachment_image($image_1, 'large', false, ['class' => 'img-default']); ?>
+						<?= wp_get_attachment_image($image_2, 'large', false, ['class' => 'img-hover']); ?>
+					</figure>
+				<?php elseif (!empty($image_1)) : ?>
+					<figure>
+						<?= wp_get_attachment_image($image_1, 'large'); ?>
+					</figure>
 				<?php endif; ?>
-				<div class="c-subtitle"><?= '#' . $model ?></div>
-				<div class="c-subtitle"><?= $preis ?></div>
+				<div>
+				<div class="c-subtitle" style="float:none;"><?= $preis ?></div>
+				<div class="c-subtitle" style="float:none;"><a href="mailto:<?= $email ?>?subject=Ihre%20Anfrage #<?= $model ?>">Anfrage: <?= '#' . $model ?></a></div>
+				</div>
 			</article>
 		</div>
 	<?php } ?>

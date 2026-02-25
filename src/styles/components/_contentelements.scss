@@ -45,10 +45,17 @@
 
 
 .c-news-item{
+
+    margin-bottom: 4rem;
+    // color: $bg-light;
+    // color: var(--bg-light);
+
+
     .c-available{
         position:absolute;
         top: 0;
         left: $grid-col;
+        opacity: 0.8;
         left: var(--grid-col);
         background-color: $bg-light;
         background-color: var(--bg-light);
@@ -57,6 +64,38 @@
         padding: 0.5em 1em;
         font-size: 0.75em;
     }
+
+    .c-subtitle{
+        font-size: 0.75em;
+        color: $text-color;
+        color: var(--text-color );
+        opacity: 0.8;
+    }
+}
+
+.hover-switch {
+	position: relative;
+	display: inline-block;
+}
+
+.hover-switch img {
+	display: block;
+	transition: opacity 0.3s ease;
+}
+
+.hover-switch .img-hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.hover-switch:hover .img-hover {
+	opacity: 1;
+}
+
+.hover-switch:hover .img-default {
+	opacity: 0;
 }
 
 @media only screen and (max-width:767px) {    
