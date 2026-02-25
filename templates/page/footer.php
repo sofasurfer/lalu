@@ -14,11 +14,11 @@ $email    = apply_filters( 'c_get_option', 'company_email' );
     <div class="c-container-wide c-line-top c-line-bottom">
         <div class="c-container c-container-no-padding c-footer-main">
             <div class="c-row">
-                <div class="c-col-6">
+                <div class="c-col-12" style="text-align: center;font-size:1.8rem;">
                      <a href="mailto:<?= $email ?>"><?= $email ?></a>
-                </div>
-                <div class="c-col-6" style="text-align: right;">
-                    <a href="https://www.instagram.com/lalu.biel/" target="_blank">Instagram</a>
+                     <span style="width:33px;line-height: 1.1;display:inline-block;margin-left:30px;">
+                     <a href="https://www.instagram.com/lalu.biel/" target="_blank"><img src="<?= get_stylesheet_directory_uri(); ?>/images/instagram.svg" alt="Energie Optimizer"></a>
+                    </span>
                 </div>
             </div>
         </div>

@@ -25,7 +25,7 @@
 	    <span class="c-deco c-deco-title"></span>
 	    <div class="c-container">
 		<div class="c-row c-row-align-center">
-		    <div class="c-col-6 c-col-12-mobile">
+		    <div class="c-col-12 c-col-12-mobile">
 		        <div class="c-box">
 		            <p class="c-lead" style="text-align:center;"><?= get_field('acf_header_lead');?></p>
 		        </div>

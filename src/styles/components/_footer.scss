@@ -4,11 +4,18 @@
 
 .c-footer {
 	padding-top: $spacing-s;
-    padding-bottom: $spacing-s;
-    padding-top: var(--spacing-s);
-    padding-bottom: var(--spacing-s);
+    padding-bottom: $spacing-m;
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
     background-color: $bg-dark;
     background-color: var(--bg-dark);
+
+    a{
+        color: #dae1cf!important;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
 }
 
 .c-footer-disclaimer {

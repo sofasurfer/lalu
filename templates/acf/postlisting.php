@@ -26,9 +26,9 @@ if($posttype == 'bags'):
 		$email    	= apply_filters( 'c_get_option', 'company_email' );
 		?>
 		
-		<div class="c-col-4 c-col-12-mobile">
-			<article class="c-news-item c-box-small c-text-medium c-text-block">
-				<?php if (!$available ): ?>
+		<div class="c-col-4 c-col-12-mobile c-news-item ">
+			<article class="c-box-small c-text-medium c-text-block">
+				<?php if (false && !$available ): ?>
 					<span class="c-available">Ausverkauft</span>
 				<?php endif; ?>
 				<?php if (!empty($image_1) && !empty($image_2)) : ?>
@@ -41,10 +41,10 @@ if($posttype == 'bags'):
 						<?= wp_get_attachment_image($image_1, 'large'); ?>
 					</figure>
 				<?php endif; ?>
-				<div>
+				<!--div>
 				<div class="c-subtitle" style="float:none;"><?= $preis ?></div>
 				<div class="c-subtitle" style="float:none;"><a href="mailto:<?= $email ?>?subject=Ihre%20Anfrage #<?= $model ?>">Anfrage: <?= '#' . $model ?></a></div>
-				</div>
+				</div-->
 			</article>
 		</div>
 	<?php } ?>

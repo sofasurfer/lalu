@@ -7,8 +7,8 @@
 /* @import must be at top of file, otherwise CSS will not work */
 /* @import url('//hello.myfonts.net/count/426563'); */
 
-$font-stack-default: 'Hanken Grotesk', sans-serif;
-$font-stack-heading: 'Hanken Grotesk', sans-serif; 
+$font-stack-default: 'Inter', sans-serif;
+$font-stack-heading: 'Inter', sans-serif; 
 
 
 /* ==========================================================================
@@ -57,7 +57,7 @@ $form-initial: #1D1D1B;
 
 :root {
     /* fonts */
-    --font-stack-default: 'Hanken Grotesk', sans-serif;
+    --font-stack-default: 'Inter', sans-serif;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
     
