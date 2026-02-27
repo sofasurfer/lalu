@@ -230,13 +230,14 @@ class general {
 	 * Usage: apply_filters( 'get_file_from_dist', 'images/ico/example.png' );
 	 */
 	public function c_get_file_with_hash_from_manifest( $filename, $with_template_path = true ) {
+		
 		$path_to_manifest = get_template_directory() . "/dist/manifest.json";
 		// Grab contents and decode them into an array
 		$data     = json_decode( file_get_contents( $path_to_manifest ), true );
 		$filename = $data[ $filename ] ?? false;
 
 		if ( ! $filename ) {
-			return false;
+			return "File [$filename] not found in manifest";
 		}
 
 		if ( $with_template_path ) {
