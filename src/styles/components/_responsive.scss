@@ -48,4 +48,10 @@
     .c-text-img .c-col-6:first-child {
 		padding-bottom: var(--spacing-s);   	
 	}
+	.c-container-wide {
+		&.c-container-padding-top {
+			padding-top: 5rem;
+			padding-bottom: 2rem;
+		}
+	}
 }

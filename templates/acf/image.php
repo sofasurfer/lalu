@@ -29,13 +29,14 @@ $caption    = $fields['caption'];
         </div>       
     </div>
 <?php elseif( $fields['wide'] ): ?>
-    <div class="c-container c-asym-left-edgeless c-img-wide">
-        <figure class="c-asym-left-edgeless-img">
-            <?= wp_get_attachment_image( $imageID, 'large' ) ?>
-            <?php if ( $caption ) { ?>
-                <figcaption class="c-legend"><?= $caption ?></figcaption>
-            <?php } ?>
-        </figure>
+    <div class="c-container c-img-center">
+        <div class="c-row c-row-center">
+            <div class="c-col-6 c-col-12-mobile">        
+                <figure class="c-asym-left-edgeless-img">
+                    <img src="<?= wp_get_attachment_image_url( $imageID, 'full' ) ?>" alt="" class="c-asym-left-edgeless-deco">
+                </figure>
+            </div>
+        </div>
     </div>
 <?php else: ?>
     <div class="c-container c-img-content">

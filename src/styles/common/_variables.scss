@@ -118,10 +118,15 @@ $form-initial: #1D1D1B;
 /* ==========================================================================
    Responsive Custom Properties
    ========================================================================== */
+@media only screen and (min-width:767px) { 
+    :root {
+        --grid-container: 80px;
+    }
+}
 
 @media only screen and (min-width:1200px) {
     :root {
-        --grid-container: 48px;
+        --grid-container: 80px;
         --grid-row: -24px;
         --grid-col: 24px;
     }
@@ -129,15 +134,15 @@ $form-initial: #1D1D1B;
 
 @media only screen and (min-width:1600px) {
     :root {
-        --grid-container: 64px;
+        --grid-container: 60px;
         --grid-row: -32px;
         --grid-col: 32px;
     }
 }
 
-
 @media only screen and (max-width:980px) {
     :root {
+        --grid-container: 20px;
         --spacing-l: 3rem;
         --spacing-m: 1.5rem; 
     }
