@@ -249,7 +249,7 @@ class general {
 
 	public function c_init() {
 
-		setcookie( "hideloader", 'true' );
+		//setcookie( "hideloader", 'true' );
 
 		add_post_type_support( 'page', 'excerpt' );
 		remove_post_type_support( 'post', 'editor' );
