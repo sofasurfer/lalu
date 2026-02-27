@@ -23,6 +23,7 @@
     <!-- Theme Color -->
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
+    
 
     <link rel="sitemap" type="application/xml" title="Sitemap" href="<?= get_sitemap_url( 'index' ) ?>">
 
